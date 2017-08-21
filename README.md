@@ -8,7 +8,7 @@ EVO](https://www.bit4id.com/en/smart-card-reader-minilector-evo/).
 Bus 001 Device 007: ID 25dd:3111
 ```
 
-**NOTA 2** Il lettore non necessita dell'installazione del driver **libacr38** per funzionare.
+**NOTA 2:** Il lettore non necessita dell'installazione del driver **libacr38** per funzionare.
 
 ## Configurazione e installazione del software
 Per prima cosa è necessario creare un utente **pcscd** e un gruppo **pcscd** tramite i seguenti comandi:
