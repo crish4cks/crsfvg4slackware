@@ -63,9 +63,9 @@ rm -rf $PRGNAM-$VERSION
 mkdir $PRGNAM-$VERSION && cd $PRGNAM-$VERSION
 
 if [ "$ARCH" = "x86_64" ]; then
-  ar vx $CWD/libbit4xpki-amd64.deb && tar -zxvf data.tar.gz
+  ar vx $CWD/$PRGNAM-amd64.deb && tar -zxvf data.tar.gz
 else
-  ar vx $CWD/libbit4xpki-i386.deb && tar -zxvf data.tar.gz
+  ar vx $CWD/$PRGNAM-i386.deb && tar -zxvf data.tar.gz
 fi
 
 chown -R root:root .
