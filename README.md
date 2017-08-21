@@ -2,7 +2,7 @@
 Il software in questo repository è stato testato sul lettore di smart card [miniLector 
 EVO](https://www.bit4id.com/en/smart-card-reader-minilector-evo/).
 
-**NOTA:** Il vendor ID e il Device ID posso essere ricavati facilmente tramite il comando **lsusb** (lanciato con privilegi di root):
+**NOTA:** Il Vendor ID e il Device ID posso essere ricavati facilmente tramite il comando **lsusb** (lanciato con privilegi di root):
 ```
 # lsusb
 Bus 001 Device 007: ID 25dd:3111
