@@ -2,11 +2,14 @@
 Il software in questo repository è stato testato sul lettore di smart card [miniLector 
 EVO](https://www.bit4id.com/en/smart-card-reader-minilector-evo/).
 
-**NOTA:** Il Vendor ID e il Device ID posso essere ricavati facilmente tramite il comando **lsusb** (lanciato con privilegi di root):
+**NOTA 1:** Il Vendor ID e il Device ID posso essere ricavati facilmente tramite il comando **lsusb** (lanciato con privilegi di root):
 ```
 # lsusb
 Bus 001 Device 007: ID 25dd:3111
 ```
+
+**NOTA 2** Il lettore non necessita dell'installazione del driver **libacr38** per funzionare.
+
 ## Configurazione e installazione del software
 Per prima cosa è necessario creare un utente **pcscd** e un gruppo **pcscd** tramite i seguenti comandi:
 ```
