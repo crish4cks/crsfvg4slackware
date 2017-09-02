@@ -75,15 +75,16 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
   -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-mkdir -p $PKG/usr/lib/bit4id/
+mkdir -p $PKG/usr/lib${LIBDIRSUFFIX}/bit4id/
 mkdir -p $PKG/usr/share/bit4id/
 mkdir -p $PKG/usr/share/applications/
 
-cp usr/lib/bit4id/* $PKG/usr/lib/bit4id/
+cp usr/lib/bit4id/* $PKG/usr/lib${LIBDIRSUFFIX}/bit4id/
 find usr/share/bit4id/ -type f ! -name bit4pin-x.desktop -exec cp -t $PKG/usr/share/bit4id/ {} +
 cp usr/share/bit4id/bit4pin-x.desktop $PKG/usr/share/applications/
 
 echo "Categories=GTK;Utility;" >> $PKG/usr/share/applications/bit4pin-x.desktop
+sed -i "s|lib|lib${LIBDIRSUFFIX}|" $PKG/usr/share/bit4id/bit4pin-x.conf
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
